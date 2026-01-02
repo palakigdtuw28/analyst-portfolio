@@ -10,7 +10,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative bg-white pt-32 pb-24 px-6 lg:px-8">
+    <section id="home" className="relative bg-[rgb(10,20,50)] text-white pt-32 pb-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Left - Profile Card */}
@@ -104,15 +104,15 @@ export function Hero() {
 
             {/* Key Highlights */}
             <div className="grid sm:grid-cols-3 gap-6">
-              <div className="bg-[rgb(174,206,230)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+              <div className="bg-[rgb(10,20,50)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default text-white">
                 <h3 className="text-gray-900 text-lg mb-2">Data Visualization</h3>
                 <p className="text-gray-600 text-sm">Power BI, Tableau, Excel Dashboards</p>
               </div>
-              <div className="bg-[rgb(174,206,230)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+              <div className="bg-[rgb(10,20,50)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default text-white">
                 <h3 className="text-gray-900 text-lg mb-2">Machine Learning</h3>
                 <p className="text-gray-600 text-sm">Python, Scikit-Learn, Predictive Models</p>
               </div>
-              <div className="bg-[rgb(174,206,230)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+              <div className="bg-[rgb(10,20,50)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default text-white">
                 <h3 className="text-gray-900 text-lg mb-2">Data Analysis</h3>
                 <p className="text-gray-600 text-sm">SQL, Pandas, Statistical Analysis</p>
               </div>

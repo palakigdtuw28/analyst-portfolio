@@ -81,7 +81,7 @@ export function Footer() {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-[rgb(174,206,230)] text-[rgb(0,0,0)] px-6 py-2 rounded-xl hover:bg-[rgb(174,206,230)] transition-all text-sm"
+              className="bg-[rgb(10,20,50)] text-[rgb(255,255,255)] px-6 py-2 rounded-xl hover:bg-[rgb(10,20,50)] transition-all text-sm"
             >
               Contact Me
             </button>

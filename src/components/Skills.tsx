@@ -62,7 +62,7 @@ export function Skills() {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-[rgb(174,206,230)] p-8 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-[rgb(10,20,50)] p-8 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-white"
             >
               <h3 className="text-gray-900 mb-6">{category.category}</h3>
               <div className="flex flex-wrap gap-2">
