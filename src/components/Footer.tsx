@@ -71,9 +71,9 @@ export function Footer() {
           </div>
 
           {/* Right - Contact */}
-          <div>
-            <h4 className="text-white mb-4">Get in Touch</h4>
-            <p className="text-gray-400 text-sm mb-4">
+          <div className="flex flex-col items-start text-left">
+            <h4 className="text-white mb-4 text-3xl font-extrabold uppercase">Get in Touch</h4>
+            <p className="text-gray-400 text-sm mb-4 max-w-xs">
               Open to internships, freelance projects, and collaborative opportunities in data analytics.
             </p>
             <button
@@ -81,7 +81,7 @@ export function Footer() {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-[rgb(10,20,50)] text-[rgb(255,255,255)] px-6 py-2 rounded-xl hover:bg-[rgb(10,20,50)] transition-all text-sm"
+              className="bg-[rgb(10,20,50)] text-[rgb(255,255,255)] px-6 py-2 rounded-xl hover:bg-[rgb(10,20,50)] transition-all text-sm mt-2"
             >
               Contact Me
             </button>
