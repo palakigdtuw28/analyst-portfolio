@@ -57,5 +57,8 @@
     server: {
       port: 3000,
       open: true,
+      mime: {
+        '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      },
     },
   });

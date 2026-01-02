@@ -9,6 +9,27 @@ export function Hero() {
     }
   };
 
+  const handleResumeDownload = async () => {
+    try {
+      const response = await fetch('/palak-resume.docx');
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Palak-Gupta-Resume.docx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback to direct link
+      window.location.href = '/palak-resume.docx';
+    }
+  };
+
   return (
     <section id="home" className="relative bg-[rgb(10,20,50)] text-white pt-32 pb-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -69,14 +90,13 @@ export function Hero() {
               </div>
 
               {/* Download Resume Button */}
-              <a
-                href="/palak-resume.docx"
-                download
+              <button
+                onClick={handleResumeDownload}
                 className="w-full bg-[rgb(0,0,0)] text-[rgb(255,255,255)] px-6 py-3 rounded-lg hover:bg-[rgb(0,0,0)] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 <Download className="w-4 h-4 group-hover:animate-bounce text-[rgb(255,255,255)]" />
                 Download Resume
-              </a>
+              </button>
             </div>
           </div>
 
