@@ -50,7 +50,7 @@ export function Skills() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-gray-900 mb-4">Skills & Competencies</h2>
+          <h2 className="text-gray-900 mb-4 text-3xl font-bold">Skills & Competencies</h2>
           <div className="w-16 h-1 bg-blue-600 mb-4"></div>
           <p className="text-gray-600 text-lg">
             Technical expertise and professional competencies in data analytics and business intelligence

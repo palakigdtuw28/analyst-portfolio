@@ -30,7 +30,7 @@ export function Education() {
       <div className="max-w-7xl mx-auto bg-[rgb(10,20,50)]">
         {/* Section Header */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-gray-900 mb-4">Education</h2>
+          <h2 className="text-gray-900 mb-4 text-3xl font-bold">Education</h2>
           <div className="w-16 h-1 bg-blue-600"></div>
         </div>
 

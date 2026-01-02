@@ -49,7 +49,7 @@ export function About() {
 
           {/* Core Competencies */}
           <div className="mb-12">
-            <h3 className="text-gray-900 mb-6">Core Competencies</h3>
+            <h3 className="text-gray-900 mb-6 text-2xl font-bold">Core Competencies</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-[rgb(10,20,50)] p-6 rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default group text-white">
                 <Database className="w-8 h-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300" />
@@ -76,7 +76,7 @@ export function About() {
 
           {/* Tools Section */}
           <div>
-            <h3 className="text-gray-900 mb-6">Technical Skills</h3>
+            <h3 className="text-gray-900 mb-6 text-2xl font-bold">Technical Skills</h3>
             <div className="bg-[rgb(10,20,50)] p-8 rounded-lg border border-gray-200 text-white">
               <div className="flex flex-wrap gap-3">
                 {tools.map((tool, index) => (
