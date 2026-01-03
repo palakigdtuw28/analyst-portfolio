@@ -1,4 +1,4 @@
-import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from '../path/to/your/profile.png';
+import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from '../assets/f14cd873504573c9950f5b82bd8e22997953f0a4.png';
 import { Download, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 export function Hero() {
