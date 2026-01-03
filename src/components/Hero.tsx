@@ -9,18 +9,48 @@ export function Hero() {
     }
   };
 
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/palak-resume.docx';
-    link.download = 'Palak-Gupta-Resume.docx';
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    
-    // Small delay to ensure link is added to DOM
-    setTimeout(() => {
-      link.click();
-      document.body.removeChild(link);
-    }, 100);
+  const handleResumeDownload = async () => {
+    try {
+      const response = await fetch('/palak-resume.docx');
+      
+      if (!response.ok) {
+        throw new Error('Download failed');
+      }
+      
+      const blob = await response.blob();
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // On mobile, open in new tab for user to save
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => {
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        }, 100);
+      } else {
+        // On desktop, trigger download
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Palak-Gupta-Resume.docx';
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => {
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        }, 100);
+      }
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: Open file directly
+      window.open('/palak-resume.docx', '_blank');
+    }
   };
 
   return (
