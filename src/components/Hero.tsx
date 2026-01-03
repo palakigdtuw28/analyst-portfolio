@@ -11,8 +11,8 @@ export function Hero() {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/palak-resume.docx';
-    link.download = 'Palak-Gupta-Resume.docx';
+    link.href = '/palak-resume.pdf';
+    link.download = 'Palak-Gupta-Resume.pdf';
     link.click();
   };
 
