@@ -1,6 +1,4 @@
-import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from git git add -A
-git commit -m "Fix: Resolve resume download parsing error on mobile devices"
-git pushe.png';
+import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from '../path/to/your/profile.png';
 import { Download, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 export function Hero() {
@@ -15,10 +13,14 @@ export function Hero() {
     const link = document.createElement('a');
     link.href = '/palak-resume.docx';
     link.download = 'Palak-Gupta-Resume.docx';
-    link.setAttribute('target', '_blank');
+    link.style.display = 'none';
     document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    
+    // Small delay to ensure link is added to DOM
+    setTimeout(() => {
+      link.click();
+      document.body.removeChild(link);
+    }, 100);
   };
 
   return (
