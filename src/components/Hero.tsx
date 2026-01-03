@@ -1,4 +1,4 @@
-import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from 'figma:asset/f14cd873504573c9950f5b82bd8e22997953f0a4.png';
+import image_f14cd873504573c9950f5b82bd8e22997953f0a4 from '../path/to/your/profile.png';
 import { Download, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 export function Hero() {
@@ -9,25 +9,14 @@ export function Hero() {
     }
   };
 
-  const handleResumeDownload = async () => {
-    try {
-      const response = await fetch('/palak-resume.docx');
-      if (!response.ok) throw new Error('Download failed');
-      
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Palak-Gupta-Resume.docx';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Error downloading resume:', error);
-      // Fallback to direct link
-      window.location.href = '/palak-resume.docx';
-    }
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/palak-resume.docx';
+    link.download = 'Palak-Gupta-Resume.docx';
+    link.setAttribute('target', '_blank');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
